@@ -1,0 +1,65 @@
+﻿@page "/"
+@namespace hello_blazor.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <environment include="Development">
+        <link href="~/assets/css/main.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+
+    </environment>
+</head>
+<body>
+    <div class="login-content">
+        <div class="text-align-center">
+            <h2>Blazor - Login form example</h2>
+        </div>
+        <br>
+
+        <div class="login-box">
+            <div class="login-form" runat="server">
+                <h3 class="login-head">Login</h3>
+                <div class="form-group">
+                    <label class="control-label">Username:</label>
+                    <input type="text" class="form-control" autofocus>
+                    <label class="control-label">Password:</label>
+                    <input type="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">LOGIN</button>
+                </div>
+                <div class="form-group btn-container">
+                    <label class="control-label">Powered by: zhamppx97</label><br>
+                    <label class="control-label">Theme: Vali Admin</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <environment include="Development">
+        <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    </environment>
+    <environment exclude="Development">
+
+    </environment>
+
+    <script type="text/javascript">
+        const warningTitleCSS = 'color:red; font-size:60px; font-weight: bold; -webkit-text-stroke: 1px black;';
+        const warningDescCSS = 'font-size: 18px;';
+        console.log('%cStop!', warningTitleCSS);
+        console.log("%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a some feature, it is a scam.", warningDescCSS);
+    </script>
+</body>
+</html>
